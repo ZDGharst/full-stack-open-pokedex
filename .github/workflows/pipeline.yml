@@ -21,10 +21,9 @@ jobs:
         run: npm run build
       - name: test
         run: npm run test
-      - name: Deploy to Heroku
-        uses: AkhileshNS/heroku-deploy@v3.12.12
+      - name: e2e tests
+        uses: cypress-io/github-action@v2
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "zdg-full-stack-open-pokedex"
-          heroku_email: "zdgharst@gmail.com"
-          branch: "master"
+          command: npm run cypress:open
+          start: npm run start-prod
+          wait-on: http://localhost:5000
