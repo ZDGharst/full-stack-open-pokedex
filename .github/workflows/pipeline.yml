@@ -36,3 +36,4 @@ jobs:
       #     branch: "master"
       #     healthcheck: "http://localhost:5000/healthcheck"
       #     checkstring: "ok"
+      #     rollbackonhealthcheckfailed: true
