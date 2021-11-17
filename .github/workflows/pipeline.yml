@@ -34,3 +34,5 @@ jobs:
       #     heroku_app_name: "zdg-full-stack-open-pokedex"
       #     heroku_email: "zdgharst@gmail.com"
       #     branch: "master"
+      #     healthcheck: "http://localhost:5000/healthcheck"
+      #     checkstring: "ok"
